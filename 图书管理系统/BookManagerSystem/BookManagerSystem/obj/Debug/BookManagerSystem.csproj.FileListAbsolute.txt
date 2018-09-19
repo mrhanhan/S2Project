@@ -1,0 +1,17 @@
+\\vmware-host\Shared Folders\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\bin\Debug\BookManagerSystem.exe.config
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\bin\Debug\BookManagerSystem.exe.config
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.csprojResolveAssemblyReference.cache
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.Properties.Resources.resources
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.csproj.GenerateResource.Cache
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\bin\Debug\BookManagerSystem.exe
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\bin\Debug\BookManagerSystem.pdb
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.MainForm.resources
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.exe
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.pdb
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.Resources.Resource.resources
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.AddBookTypeForm.resources
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.BookInfoForm.resources
+Z:\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.ErrorForm.resources
+\\Mrhan\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\bin\Debug\BookManagerSystem.exe.config
+\\Mrhan\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.exe
+\\Mrhan\帮初学习\S2\项目\图书管理系统\BookManagerSystem\BookManagerSystem\obj\Debug\BookManagerSystem.pdb

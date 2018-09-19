@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="BaseNote" Bounds="-271.343629048665,-120.713463897705,75.1933333333334,25.24" UseManualLocation="True" />
+    <Node Id="Note" Bounds="-3.19113655090337,124.564818759664,50,25.24" UseManualLocation="True" />
+    <Node Id="NoteBlock" Bounds="-453.321161191685,17.9125527191162,79.5699999999999,25.24" UseManualLocation="True" />
+    <Node Id="NoteNode" Bounds="-258.151156921387,4.84935793037417,80.54,25.24" UseManualLocation="True" />
+    <Node Id="NoteType" Bounds="-239.542234191895,129.585117939758,76.37,25.24" UseManualLocation="True" />
+    <Node Id="UserInfo" Bounds="-631.937827858351,-19.6550341796875,68.6166666666668,25.24" UseManualLocation="True" />
+    <Node Id="便签内容，标题，图片集合，创建时间，修改时间" Category="Comment" Bounds="-72.0033409118653,179.804918759664,248,40.48" UseManualLocation="True" />
+    <Node Id="便签基类" Category="Comment" Bounds="-417.751159667969,-175.953564463552,212,25.24" Label="包含最基本信息（标题，创建时间）" UseManualLocation="True" />
+    <Node Id="便签的类型" Category="Comment" Bounds="-299.098975372315,250.285018759664,248,40.48" Label="便签的类型，类型的背景图，便签集合，下一级Type" UseManualLocation="True" />
+    <Node Id="便签节点（节点列表）" Category="Comment" Bounds="-84.9511611938459,-64.854981240336,140,25.24" UseManualLocation="True" />
+    <Node Id="包含" Category="Comment" Bounds="-109.824472705523,118.934833063884,50,25.24" UseManualLocation="True" />
+    <Node Id="包含1" Category="Comment" Bounds="-342.151161191685,-0.746284027099588,50,25.24" Label="包含" UseManualLocation="True" />
+    <Node Id="包含2" Category="Comment" Bounds="-533.321161191685,-12.527546043396,49.9999999999999,25.24" Label="包含" UseManualLocation="True" />
+    <Node Id="整体便签集合" Category="Comment" Bounds="-605.898975372314,89.9799897766113,248,40.48" Label="整体便签集合，包含用户信息，便签类型集合" UseManualLocation="True" />
+    <Node Id="用户信息类（账号，密码，年龄，性别）" Category="Comment" Bounds="-755.351161193848,-94.9351366881622,248,40.48" Label="用户信息类（账号，密码，年龄，性别，个性签名，头像）" UseManualLocation="True" />
+    <Node Id="继承" Category="Comment" Bounds="-203.505588734945,60.0894579303742,50,25.24" Label="继承" UseManualLocation="True" />
+    <Node Id="继承1" Category="Comment" Bounds="-225.723922068278,-60.7069481844584,50,25.24" Label="继承" UseManualLocation="True" />
+    <Node Id="继承2" Category="Comment" Bounds="-351.343629048665,-76.6733638000488,50,25.24" Label="继承" UseManualLocation="True" />
+    <Node Id="继承3" Category="Comment" Bounds="-101.105588734945,59.3937983512879,50,25.24" Label="继承" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="BaseNote" Target="NoteBlock" Bounds="-388.2138671875,-95.4734649658203,140.320465087891,108.211396217346" />
+    <Link Source="BaseNote" Target="NoteNode" Bounds="-232.689788818359,-95.4734649658203,11.3277435302734,91.4384617805481" />
+    <Link Source="NoteBlock" Target="NoteNode" Bounds="-373.751159667969,23.8734569549561,106.669219970703,5.35605812072754" />
+    <Link Source="NoteBlock" Target="UserInfo" Bounds="-566.049987792969,7.88924121856689,112.728820800781,16.9097490310669" />
+    <Link Source="NoteNode" Target="Note" Bounds="-197.230850219727,30.0893573760986,185.615186691284,94.5319423675537" />
+    <Link Source="NoteNode" Target="NoteType" Bounds="-216.209367328759,30.0893574905396,11.9984290672954,90.5737034713963" />
+    <Link Source="NoteType" Target="Note" Bounds="-163.172225952148,141.403366088867,151.04985332489,3.26158142089844" />
+    <Link Source="便签内容，标题，图片集合，创建时间，修改时间" Target="Note" Bounds="31.7656126611531,157.917777207248,10.5110351266114,21.8871522971462" />
+    <Link Source="便签基类" Target="BaseNote" Bounds="-293.930537431358,-150.713564758301,35.0181608393676,24.7987519136634" />
+    <Link Source="便签的类型" Target="NoteType" Bounds="-196.97049519953,163.642402329682,17.7297755786159,86.6426144549862" />
+    <Link Source="便签节点（节点列表）" Target="NoteNode" Bounds="-172.628735008897,-39.614981240336,120.937012516427,41.5406037363522" />
+    <Link Source="整体便签集合" Target="NoteBlock" Bounds="-464.535351571794,49.9833494738256,34.3126024321908,39.9966403027858" />
+    <Link Source="用户信息类（账号，密码，年龄，性别）" Target="UserInfo" Bounds="-621.263597562692,-54.4551370239258,13.329717026501,26.7451043635407" />
+  </Links>
+  <Categories>
+    <Category Id="Comment" Label="注释" Description="表示在图表中用户定义的注释" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="注释" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="标签" Description="可批注对象的可显示标签" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="注释" ValueLabel="包含注释">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+</DirectedGraph>

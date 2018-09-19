@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>用户注册</title>
+    <base target="body" >
+    <link rel="stylesheet" href="styles/golbal.css"/>
+    <link rel="stylesheet" href="styles/layout.css"/>
+    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="styles/app.css"/>
+    <link rel="stylesheet" href="styles/home.css"/>
+    <link rel="stylesheet" href="styles/space.css"/>
+    <link rel="stylesheet" href="styles/like.css"/>
+    <script type="text/javascript" src="scripts/dataSave.js"></script>
+    <script type="text/javascript" src="scripts/userData.js"></script>
+    <script type="text/javascript" src="scripts/layout.js"></script>
+  </head>
+  <body style="min-width:1500px;">
+    <div class="topBack">
+      <div class="body-group  mrHeight" style="background:#eaeaea;">
+          <div class="top group-6  ">
+            <img src="image/logo.jpg" width="300"/>
+            <div class="t1">
+              <a href="index.html" >游戏人生</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a  onclick="showLoginPlane(0,0)">我的信息</a>
+            </div>
+            <div class="t2">
+                <a href="http://game.qq.com/brand/?ADTAG=media.innerenter.gamecom.navigation" target="_blank" >腾讯游戏介绍</a>  &nbsp;&nbsp;&nbsp;&nbsp; <a href="#">周边商城</a>
+            </div>
+          </div>
+      </div>
+      <div class="body-group mrHeight " style="background:url(image/topback.jpg);height:220px;">
+
+      </div>
+      <div class="body-group mrHeight  " style="background:#eaeaea; height:180px;">
+
+      </div>
+  </div>
+  <!-- 模拟框架 -->
+    <div id="body" class="group-7">
+    </div>
+
+    <div style="text-align:center; float: left;width:100%;font-size:12pt;" class="banq">
+       <hr/>
+       &copy;版权Mrhan | 腾讯
+    </div>
+
+      <script type="text/javascript" id="sc" >
+        var resc = document.getElementById("sc");
+      function layoutLL(){
+        var ss = document.querySelectorAll(".addscript");
+        for(var i=0;i<ss.length;i++){
+          var s = ss[i];
+          resc.parentElement.removeChild(s);
+        }
+        var sps = readKV("script").split(" ");
+        for(var i=0;i<sps.length;i++){
+            var script = document.createElement("script");//创建创建脚本标签
+            script.setAttribute("type","text/javascript");
+              script.setAttribute("class","addscript");
+           script.setAttribute("src",sps[i]);
+          resc.parentElement.insertBefore(script,resc);
+         }
+         setTimeout(function(){if(scriptLoad)scriptLoad()},50)
+
+       }
+
+      </script>
+    <!--容器-->
+    <iframe id="frame1" name="body"  src="index.html" onload="document.getElementById('body').innerHTML=readKV('ch'),layoutLL();" width="100%">
+    </iframe>
+
+    <!--用户小页面-->
+
+    <div class="userGroup" id="userGroup" onmouseout="showLoginPlane(-450,-350)" onmouseover="showLoginPlane(0,0)">
+
+
+      <div class="userlogin" id="userlogin">
+      <!-- 用户界面功能区 -->
+       <div class="left">
+          <div id="userimg"></div>
+          <div class="btns btns_hover" url="index.html" onclick="ItemClick(this)">主页</div>
+          <div class="btns" url="like.html" onclick="ItemClick(this)">我的游戏</div>
+          <div class="btns" url="sapce.html" onclick="ItemClick(this)">我的动态</div>
+          <div class="btns" onclick="logOut()">退出登录</div>
+       </div>
+      <!-- 用户信息板块 -->
+       <div class="right" >
+         <!-- 用户信息面板 -->
+         <div class="usermsglayout">
+           <h3 align="center" style="border-bottom:1px solid white;"> 我的信息</h3>
+           <div class="msgGroup" >
+              <div class="msgtit"  >头像</div>:
+              <select id="userselect" onchange="selectChanged(this),showBtns(this.parentElement,true);">
+                <script type="text/javascript">
+                for(var i=1;i<=10;i++)
+                   document.write("<option value='image/tx/"+i+".png'> 头像"+i+"</option>");
+                </script>
+              </select>
+              <button onclick="update('headImg',document.getElementById('userselect').options[document.getElementById('userselect').selectedIndex].value),showBtns(this.parentElement,false);">修改</button>
+
+              <button onclick="blackImg(),showBtns(this.parentElement,false);">取消</button>
+           </div>
+            <div class="msgGroup">
+               <div class="msgtit">用户名</div>:
+               <input class="msgcon" reg="^\w{4,8}$" type="text" id="username" value="admin" readonly/>
+
+            </div>
+            <div class="msgGroup" onmouseover="showBtns(this,true);" onmouseout="showBtns(this,false);">
+               <div class="msgtit">密码</div>:
+               <input class="msgcon" reg="^[\w_]{4,8}$" type="text" id="userpwd" value="admin" readonly/>
+               <button onclick="isChangeData(this.parentElement,true)">修改</button>
+               <button onclick="checkData(this.parentElement,'pwd')">确认</button>
+            </div>
+            <div class="msgGroup"  onmouseover="showBtns(this,true);" onmouseout="showBtns(this,false);">
+               <div class="msgtit">邮箱</div>:
+               <input class="msgcon"  reg="^\w+@\w+\.\w+$" type="text" id="email" value="" readonly/>
+               <button onclick="isChangeData(this.parentElement,true)">修改</button>
+               <button onclick="checkData(this.parentElement,'email')">确认</button>
+            </div>
+            <div class="msgGroup">
+               <div class="msgtit">性别</div>:
+               <input class="msgcon" type="text" id="usersex" value="男" readonly/>
+
+            </div>
+            <div class="msgGroup"  onmouseover="showBtns(this,true);" onmouseout="showBtns(this,false);">
+               <div class="msgtit">地址</div>:
+               <input class="msgcon" type="text" id="useradd" value="男" reg="^[^\d]" readonly/>
+               <button onclick="isChangeData(this.parentElement,true)">修改</button>
+               <button onclick="checkData(this.parentElement,'address')">确认</button>
+            </div>
+            <div class="msgGroup">
+               <div class="msgtit">注册时间</div>:
+               <input class="msgcon" type="text" id="userDate" value="123" readonly/>
+
+            </div>
+         </div>
+       </div>
+      </div>
+      <!--用户未登录时的面板-->
+      <div class="notLogin" id="notLogin">
+        <!--用户登陆-->
+        <div class="login" id="layout-login">
+             <div class="layout-loginfrom">
+                 <div class="title"> 用户登录</div>
+                 <div class="input">
+                   <!-- 错误提示 -->
+                    <div class="msg"></div>
+                    <div class="lab">用户名:</div>
+                    <input type="text" id="usernameL" max="12" size="20"/>
+
+                </div>
+                <div class="input">
+                    <div class="msg"> </div>
+                   <div class="lab">密&nbsp;&nbsp;&nbsp;码:</div>
+                   <input type="password" id="userpwdL" max="12" size="20"/>
+               </div>
+               <div class="btns">
+                   <button onclick="userLogin()">登陆</button>
+                    <button onclick="showLoginORReg(false)">注册</button>
+               </div>
+               <hr/>
+               <div class="otherLogin">
+                 <div class="other-icon" style="background-image:url(image/other/qq.jpg)" title="QQ登陆"> </div>
+                 <div class="other-icon" style="background-image:url(image/other/wx.jpg)" title="微信登陆"> </div>
+                 <div class="other-icon" style="background-image:url(image/other/wb.jpg)" title="微博登陆"> </div>
+               </div>
+             </div>
+        </div>
+        <!--用户注册-->
+        <div class="reg" id="layout-reg">
+          <div class="layout-loginfrom">
+              <div class="title"> 用户注册</div>
+              <div class="input">
+                <!-- 错误提示 -->
+                 <div class="msg" reg="^\w{4,8}$" errtxt="用户登录名称4-8位">用户登录名称4-8位</div>
+                 <div class="lab">用户名:</div>
+                 <input type="text" id="usernameR" max="12" size="20"/>
+
+             </div>
+
+            <div class="input">
+                <div class="msg" reg="^\w+@\w+\.\w+$" errtxt="邮箱xxx@xx.xx">邮箱xxx@xx.xx</div>
+               <div class="lab">邮&nbsp;&nbsp;&nbsp;箱:</div>
+               <input type="text" id="emailR" max="12" size="20"/>
+           </div>
+           <div class="input">
+               <div class="msg" reg="^[\w_]{4,8}$" errtxt="密码长度 6-12包含数字字母下划线"> 密码长度 6-12包含数字字母下划线</div>
+              <div class="lab">密&nbsp;&nbsp;&nbsp;码:</div>
+              <input type="password" id="userpwdR" max="12" size="20"/>
+          </div>
+          <div class="input">
+              <div class="msg" > </div>
+             <div class="lab">性&nbsp;&nbsp;&nbsp;别:</div>
+             <input type="radio" checked id="sexMan"  name="sex"/><lable for="sexMan">男</lable>
+              <input type="radio"  id="sexWoman"  name="sex"/><lable for="sexWoman">女</lable>
+         </div>
+            <div class="btns">
+                <button onclick="regUser()">注册</button>
+                 <button onclick="showLoginORReg(true)">返回登陆</button>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

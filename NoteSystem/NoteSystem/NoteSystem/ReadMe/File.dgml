@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="...................." Bounds="202.256878662109,117.65455187242,77.8,25.24" Label="...................." UseManualLocation="True" />
+    <Node Id="AllNoteFilePath" Bounds="256.037514851888,-108.065947173395,108.903333333333,25.24" Label="AllNoteFilePath" />
+    <Node Id="AllUserDate" Bounds="132.594189147949,-108.065947173395,87.79,25.24" Label="AllUserDate" />
+    <Node Id="FileSystem" Bounds="-273.717037582398,-106.031094059948,288.026449203491,281.485333929443" Group="Expanded" UseManualLocation="True" />
+    <Node Id="Note1.noteFile" Bounds="128.490714518229,62.4144510186048,104.466666666667,25.24" Label="Note1.noteFile" UseManualLocation="True" />
+    <Node Id="Note2.notefile" Bounds="262.957442830404,62.4144548265215,102.253333333333,25.24" Label="Note2.notefile" />
+    <Node Id="NoteAllDate" Bounds="-174.965609359741,130.214143269154,90.55,25.24" Label="NoteAllDate" />
+    <Node Id="NoteBlock" Bounds="-169.47558265686,4.49393986949529,79.57,25.24" Label="NoteBlock" />
+    <Node Id="NoteFIle" Bounds="108.490723403134,22.4143510186048,276.72003112793,140.480304675293" Group="Expanded" UseManualLocation="True" />
+    <Node Id="NoteSystem.noteSys" Bounds="110.489120483398,-203.306174736872,278.000068664551,140.480327563477" Group="Expanded" Label="NoteSystem.noteSys" UseManualLocation="True" />
+    <Node Id="所有用户数据" Category="Comment" Bounds="130.489120483398,-163.306074736872,92,25.24" Label="所有用户数据" />
+    <Node Id="文件信息（保存单个用户信息，便签块（便签类型（便签类型...便签）...））" Category="Comment" Bounds="-253.717037582398,-66.0309940599481,248,40.48" />
+    <Node Id="文件夹" Category="Comment" Bounds="332.376037597656,-32.8257471733952,56,25.24" UseManualLocation="True" />
+    <Node Id="文件系统" Category="Comment" Bounds="-170.917025756836,-198.871194059948,68,25.24" UseManualLocation="True" />
+    <Node Id="此文件保存着，用户的全局数据" Category="Comment" Bounds="150.548240661621,-258.546274736872,188,25.24" UseManualLocation="True" />
+    <Node Id="用户便签文件路径" Category="Comment" Bounds="252.489189147949,-163.306074736872,116,25.24" Label="用户便签文件路径" />
+    <Node Id="系统文件数据（所有用户信息，该用户所对应文件的路径）" Category="Comment" Bounds="-253.690584564209,59.7340511060675,248,40.48" />
+  </Nodes>
+  <Links>
+    <Link Source="AllNoteFilePath" Target="NoteFIle" Bounds="273.498793665929,-82.8259471733952,32.7207694506607,96.7149922056858" />
+    <Link Source="FileSystem" Target="NoteAllDate" Category="Contains" />
+    <Link Source="FileSystem" Target="NoteBlock" Category="Contains" />
+    <Link Source="FileSystem" Target="文件信息（保存单个用户信息，便签块（便签类型（便签类型...便签）...））" Category="Contains" />
+    <Link Source="FileSystem" Target="系统文件数据（所有用户信息，该用户所对应文件的路径）" Category="Contains" />
+    <Link Source="NoteFIle" Target="...................." Category="Contains" Bounds="210.826396598963,-36.6778462432642,0.617273444211605,21.0039840141314" />
+    <Link Source="NoteFIle" Target="Note1.noteFile" Category="Contains" Bounds="220.267773439968,2.20689936039044,6.02880845017788,21.3391228000354" />
+    <Link Source="NoteFIle" Target="Note2.notefile" Category="Contains" Bounds="222.078277281616,16.3126791220678,4.25383093906405,21.176364121648" />
+    <Link Source="NoteSystem.noteSys" Target="AllNoteFilePath" Category="Contains" Bounds="41.0148269144694,-57.7969128950685,64.8235062711855,3.95077032683335" />
+    <Link Source="NoteSystem.noteSys" Target="AllUserDate" Category="Contains" Bounds="-30.7566689046224,-154.80833420292,31.0430842874716,3.74399270844776" />
+    <Link Source="NoteSystem.noteSys" Target="所有用户数据" Category="Contains" />
+    <Link Source="NoteSystem.noteSys" Target="用户便签文件路径" Category="Contains" />
+    <Link Source="所有用户数据" Target="AllUserDate" Bounds="176.964019775391,-139.318572998047,0,21" />
+    <Link Source="文件信息（保存单个用户信息，便签块（便签类型（便签类型...便签）...））" Target="NoteBlock" Bounds="-129.687194824219,-25.5154209136963,0,20.9996562004089" />
+    <Link Source="文件夹" Target="NoteFIle" Bounds="323.887422039049,-7.58574717339523,23.7942500756841,23.6548598162766" />
+    <Link Source="文件系统" Target="FileSystem" Bounds="-136.505049640254,-173.631190185547,1.9131248199638,58.6048877692239" />
+    <Link Source="此文件保存着，用户的全局数据" Target="NoteSystem.noteSys" Bounds="245.100732163366,-233.306274736872,0.919741286187218,21.0087123422093" />
+    <Link Source="用户便签文件路径" Target="AllNoteFilePath" Bounds="310.964019775391,-139.318572998047,0,21" />
+    <Link Source="系统文件数据（所有用户信息，该用户所对应文件的路径）" Target="NoteAllDate" Bounds="-129.687194824219,100.202522277832,0,20.9996566772461" />
+  </Links>
+  <Categories>
+    <Category Id="Comment" Label="注释" Description="表示在图表中用户定义的注释" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="注释" />
+    <Category Id="Contains" Label="包含" Description="链接的源是否包含目标对象" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="包含者" IsContainment="True" OutgoingActionLabel="包含" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Group" Label="组" Description="将节点显示为组" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="标签" Description="可批注对象的可显示标签" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="注释" ValueLabel="包含注释">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+</DirectedGraph>

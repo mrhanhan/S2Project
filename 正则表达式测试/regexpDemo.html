@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>正则表达式测试</title>
+	<style type="text/css">
+	.title{
+		text-shadow: 2px 2px 6px yellow;
+		color:gray;
+		text-align: center;
+	}
+		body{
+			padding-top: 50px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		.body{
+			background-color: #fef;
+		}
+		.input-group{
+			padding: 10px;
+		}
+		.input-group *{
+			
+			display: block;
+			width: 100%;
+
+		}
+		.input-group .input{
+			font-size: 18pt;
+
+		}
+		.input-group .area{
+			font-size: 14pt;
+			height: 200px;
+
+		}
+		#regBody{
+			min-height: 300px;
+			padding: 10px;
+		}
+		.JG-group{
+			padding: 20px;
+			border-bottom: 1px solid black;
+			width: 80%;
+		}
+
+		.item-tit , .item-tex{
+			width: 35%;
+			display: inline-block;
+
+		}
+		.item-tit{
+			width: 25%;
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
+			margin-right: 10%;
+
+		}
+		button{
+			width: 50%;
+			margin: 20px auto;
+			font-size: 20pt;
+			box-shadow: 0px 0px 18px blue;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="title">正则表达式测试</h1>
+	<div class="body">
+		<script type="text/javascript">
+			
+			function regObj(text,index,length){
+				length=text.length;
+				return {
+					"text":text,
+					 "index":index,
+					 "lastIndex":index+length,
+					 "length":length
+				};
+			}
+
+			function regF(reg,text,att){
+				var p= new RegExp(reg,att);
+				var atts=[];
+				var res=null;
+				console.log(p)
+				while((res=p.exec(text))!=null){
+					console.log(res)
+					atts.push(regObj(res[0],res.index,res.length))
+				}
+				// if(res!=null){
+				// 	for(var i=0;i<res.length;i++)
+				// 		atts.push(regObj(res[i],res.index,res.length))
+				// }
+				return atts;
+				
+			}
+			function onReg(){
+				var reg = document.getElementById('reg').value
+				var text = document.getElementById('textArea').value;
+				var att = document.getElementById('att').value;
+				var p=document.getElementById('regBody');
+				if(!text){
+					p.innerHTML=" 匹配内容为空";
+					return;
+				}
+				if(!reg){
+					p.innerHTML=" 表达式为空";
+					return;
+				}
+				if(!(new RegExp("^[i|m|g]+$").test(att))){
+					p.innerHTML=" 匹配模式不合法";
+					return;
+				}
+				var arrays=regF(reg,text,att);
+				clearChildNode(p);
+				console.log(arrays);
+				for(var i =0; i<arrays.length;i++){
+					appendNode(p,arrays[i])
+				}
+			}
+			//显示匹配结果
+			function appendNode(nodeP,itm){
+				var bodyDiv=document.createElement("div");//创建DIV对象
+				bodyDiv.setAttribute("class","JG-group");//设置DIV的属性
+
+				var div = document.createElement("div");//创建DIV对象
+				div.setAttribute("class","item-tit")
+				div.innerHTML="匹配内容";
+				bodyDiv.appendChild(div);
+
+			    div = document.createElement("div");//创建DIV对象
+				div.setAttribute("class","item-tex")
+				div.innerHTML=itm.text;
+				bodyDiv.appendChild(div);
+				div = document.createElement("div");//创建DIV对象
+				div.setAttribute("class","item-tit")
+				div.innerHTML="匹配开下标";
+				bodyDiv.appendChild(div);
+
+			    div = document.createElement("div");//创建DIV对象
+				div.setAttribute("class","item-tex")
+				div.innerHTML=itm.index;
+				bodyDiv.appendChild(div);
+
+				div = document.createElement("div");//创建DIV对象
+				div.setAttribute("class","item-tit")
+				div.innerHTML="匹配长度";
+				bodyDiv.appendChild(div);
+
+			    div = document.createElement("div");//创建DIV对象
+				div.setAttribute("class","item-tex")
+				div.innerHTML=itm.length;
+				bodyDiv.appendChild(div);
+
+				nodeP.appendChild(bodyDiv)
+			}
+			//清除制定节点下的所有子节点
+			function clearChildNode(nodeP){
+				var nodeList = nodeP.childNodes;//获取子节点NodeList
+				var nodeSize = nodeList.length;//获取子节点数量
+				for(var i=0;i<nodeSize;i++){
+					if(nodeP.childNodes.length>0)
+						nodeP.removeChild(nodeList[0]);//移除最前节点
+				}
+			}
+
+
+		</script>
+		
+		<div class="input-group">
+			<label >表达式  <a href="http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp" target="_blank">帮助</a></label>
+			<input type="text" class="input" id="reg"/>
+		</div>
+		<div class="input-group">
+			<label >匹配模式</label>
+			<input type="text" class="input" id="att" value="g"/>
+			<small>模式包含"g"、"i" 和 "m"，分别用于指定全局匹配、区分大小写的匹配和多行匹配</small>
+		</div>
+		<div class="input-group">
+			<label >匹配内容</label>
+			<textarea id="textArea" class="input area"></textarea> 
+		</div>
+		<div class="input-group">
+			<button onclick="onReg()">匹配</button>
+		</div>
+		<div class="input-group">
+			<label for="reg" style="background-color:white;box-shadow: 2px 2px 5px black;">匹配结果</label>
+		</div>
+		<div id="regBody">
+			
+		</div>
+	</div>
+</body>
+</html>

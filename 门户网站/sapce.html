@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>鐢ㄦ埛娉ㄥ唽</title>
+    <script type="text/javascript" src="scripts/dataSave.js"></script>
+    <script type="text/javascript" src="scripts/userData.js"></script>
+
+
+  </head>
+  <body >
+      <div id="childBody">
+        <div class="space-body shadow">
+          <!-- 头部 -->
+          <div class="like-top">
+
+            <div class="like-userimg" style="background-size:100%;" onclick="showLoginPlane(0,0)">
+              <!-- 用户头像 -->
+            </div>
+            <div class="like-usermsg">
+              <!-- 用户信息 -->
+              <div class="like-username">
+                2222
+              </div>
+              <div class="like-add">
+                2222
+              </div>
+            </div>
+          </div>
+          <!-- 发布评论 -->
+          <div class="sendSpace " id="sendSpace" ondblclick="ishow(this)" show=false;>
+            <div class="titles" style="text-align:left;">发布动态</div>
+            <div class="msgGroup">
+               <div class="msgtit">标题</div>:
+               <input class="msgcon"  type="text" />
+            </div>
+
+            <div style="color:white;font-size:14pt; ">内容</div>
+            <textarea class="text" rows="5" cols="50"> </textarea>
+            <button onclick="SendBook()">发布</button>
+          </div>
+
+        </div>
+        <div class="space-body shadow books"  style="padding:20px;">
+          <div class="bookGroup" onmouseover="showInput(this,true)" onmouseout="showInput(this,false)">
+            <div class="title">老王</div>
+            <div class="user">
+              <span class="spacename">222</span>
+              <span class="spacedate">222</span>
+            </div>
+            <div class="nr">
+              <textarea cols="100" rows="10" readonly>11111</textarea>
+            </div>
+            <div class="PLGroup">
+              <!-- <div class="PL">
+                  <div class="PLUser">
+                  <span class="spacename">222</span>
+                  <span class="spacedate">222</span>
+                </div>
+                <div class="PLmsg">111111</div>
+              </div> -->
+            </div>
+            <div class="PLInput">
+              <input size="95" type="text" placeholder="请填写评论！" /><button onclick="inputPL(this)">评论</button>
+            </div>
+          </div>
+        </div>
+     </div>
+     <script type="text/javascript">
+
+         saveKV('ch',document.getElementById("childBody").innerHTML);
+         saveKV('script',"scripts/space.js");
+     </script>
+
+  </body>
+  </html>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="UI" Bounds="-59.6625619466465,-65.1019812021338,107.991168,140.473583299653" Group="Expanded" UseManualLocation="True" />
+    <Node Id="UI节点无需对文件直接操作，所有对应的" Category="Comment" Bounds="78.3286060087343,-45.9420814500878,248.486666666667,55.72" Label="UI节点无需对文件直接操作，所有对应的操作，直接通过操作类映射到文件即可，这样就无需再次加载文件，重新刷新视图" UseManualLocation="True" />
+    <Node Id="Ui界面" Category="Comment" Bounds="26.0141460109033,-123.238228810844,54.5866666666667,25.24" Label="ui界面" UseManualLocation="True" />
+    <Node Id="便签文件" Bounds="-302.233313628531,91.7226468006202,68,25.24" UseManualLocation="True" />
+    <Node Id="修改" Bounds="-299.662592464225,-52.3539430321096,50,25.24" Label="修改" />
+    <Node Id="修改操作" Category="Comment" Bounds="-417.662592464225,-1.76118480682373,68,25.24" UseManualLocation="True" />
+    <Node Id="修改操作1" Category="Comment" Bounds="-157.662561946647,-33.9409948539734,68,25.24" Label="修改操作" UseManualLocation="True" />
+    <Node Id="修改类型" Bounds="-39.6625619466465,30.1348608175196,67.991168,25.23664128" Label="修改类型" />
+    <Node Id="操作类" Bounds="-319.662592464225,-92.3540430321096,108.000030517578,140.4803" Group="Expanded" UseManualLocation="True" />
+    <Node Id="添加类型" Bounds="-39.6625619466465,-25.1018812021338,67.991168,25.23664128" Label="添加类型" />
+    <Node Id="添加类型1" Bounds="-299.662561946647,2.88615696789043,68,25.24" Label="添加类型" />
+    <Node Id="返回修改结果" Category="Comment" Bounds="-181.662561946647,21.2991045761108,92,25.24" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="UI" Target="修改类型" Category="Contains" Bounds="77.2142010397307,40.3398870259836,1.34710019165355,21.0185277488372" />
+    <Link Source="UI" Target="操作类" Bounds="-202.757522583008,-6.84060287475586,143.094959259033,9.70720505714417" />
+    <Link Source="UI" Target="添加类型" Category="Contains" Bounds="73.2004486885533,42.5227429415104,0.00555192280224048,21.000100314526" />
+    <Link Source="Ui界面" Target="UI" Bounds="34.2032844233821,-97.9982289123535,12.6744924949088,24.8770583611248" />
+    <Link Source="操作类" Target="UI" Bounds="-211.662567138672,-1.97922027111053,143.00252532959,10.833496928215" />
+    <Link Source="操作类" Target="便签文件" Bounds="-267.793838199264,48.1262569678904,0.703348193054808,34.5982489656545" />
+    <Link Source="操作类" Target="修改" Category="Contains" Bounds="-66.9781485336368,-20.2339380233234,2.22039360779763,21.0393681526182" />
+    <Link Source="操作类" Target="添加类型1" Category="Contains" Bounds="-71.0659297872004,-15.017724046885,0.00197081428672163,21.0000000396338" />
+  </Links>
+  <Categories>
+    <Category Id="Comment" Label="注释" Description="表示在图表中用户定义的注释" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="注释" />
+    <Category Id="Contains" Label="包含" Description="链接的源是否包含目标对象" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="包含者" IsContainment="True" OutgoingActionLabel="包含" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Group" Label="组" Description="将节点显示为组" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="标签" Description="可批注对象的可显示标签" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="注释" ValueLabel="包含注释">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+</DirectedGraph>

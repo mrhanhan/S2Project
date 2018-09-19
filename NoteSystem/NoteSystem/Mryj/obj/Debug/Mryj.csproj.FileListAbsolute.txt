@@ -1,0 +1,9 @@
+Z:\帮初学习\S2\项目\NoteSystem\NoteSystem\Mryj\bin\Debug\Mryj.exe.config
+Z:\帮初学习\S2\项目\NoteSystem\NoteSystem\Mryj\bin\Debug\Mryj.exe
+Z:\帮初学习\S2\项目\NoteSystem\NoteSystem\Mryj\bin\Debug\Mryj.pdb
+Z:\帮初学习\S2\项目\NoteSystem\NoteSystem\Mryj\obj\Debug\Mryj.csprojResolveAssemblyReference.cache
+Z:\帮初学习\S2\项目\NoteSystem\NoteSystem\Mryj\obj\Debug\Mryj.Form1.resources
+Z:\帮初学习\S2\项目\NoteSystem\NoteSystem\Mryj\obj\Debug\Mryj.Properties.Resources.resources
+Z:\帮初学习\S2\项目\NoteSystem\NoteSystem\Mryj\obj\Debug\Mryj.csproj.GenerateResource.Cache
+Z:\帮初学习\S2\项目\NoteSystem\NoteSystem\Mryj\obj\Debug\Mryj.exe
+Z:\帮初学习\S2\项目\NoteSystem\NoteSystem\Mryj\obj\Debug\Mryj.pdb

@@ -1,0 +1,250 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+iframe{
+  position: absolute;
+  display: none;
+}
+.top div {
+  float: right;
+  font-size: 10pt;
+
+  clear: right;
+
+}
+.top .t1{
+  margin-bottom: 20px;
+  line-height:
+}
+
+.top div a{
+  color:gray;
+  text-decoration: none;
+}
+.top div a:hover{
+  color:red;
+
+}
+.top .t2 a{
+
+  font-weight: bold;
+  font-size: 14pt;
+    color:black;
+
+}
+#body{
+  top: -450px;
+  text-align: center;
+
+}
+/* 用户界面板块 */
+/* 用户小界面 */
+.userGroup{
+    overflow: hidden;
+   position:fixed;
+   width: 500px;
+   min-height:400px;
+   background-color:green;
+   bottom:-350px;
+   transition: all 500ms;
+   right:-450px;
+}
+.userGroup:hover{
+    right:0px;
+    bottom:0px;
+}
+.userlogin{
+  position: absolute;
+  top: 0px;
+  left:0px;
+
+  width: 500px;
+  height:400px;
+  display: none;
+}
+.notLogin{
+    overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left:0px;
+
+  width: 500px;
+  height:400px;
+
+}
+.notLogin .login,.notLogin .reg{
+    overflow: hidden;
+  transition: all 500ms;
+  width: 100%;
+  height:100%;
+  position: relative;
+  color:white;
+}
+.notLogin .login{
+  padding-top: 50px;
+  text-align: center  ;
+}
+.layout-loginfrom{
+
+    transition: all 500ms;
+  display:inline-block;
+    font-size: 14pt;
+  margin:0px;
+
+}
+.layout-loginfrom .title{
+  font-size: 24pt;
+  font-weight: bold;
+}
+.layout-loginfrom .input{
+  text-align: left;
+  margin-top: 10px;
+
+}
+.layout-loginfrom .input .msg{
+  text-align: right;
+  color:pink;
+
+}
+.layout-loginfrom .input .lab {
+  display: inline-block;
+}
+.layout-loginfrom .input input {
+      transition: all 200ms;
+      line-height: 20px;
+      border-radius: 5px;
+}
+.layout-loginfrom .input input:hover {
+  box-shadow: inset 3px 3px 5px gray;
+}
+
+.layout-loginfrom .btns button{
+  margin: 20px 10px;;
+  display:inline-block;
+  transition:  all 200ms;
+  width: 100px;
+  height:30px;
+
+}
+.layout-loginfrom .btns button:hover{
+    box-shadow: inset 3px 3px 5px gray;
+}
+
+.msg{
+  font-size: 10px;
+  height: 10px;
+  padding-right:30px;
+}
+.otherLogin{
+  margin-top: 5px;
+  text-align: center;
+}
+.otherLogin div{
+  display: inline-block;
+  transition:  all 200ms;
+  width: 30px;
+  height:30px;
+  border-radius: 15px;
+  border: 1px solid white;
+  background-size: 100%;
+  background-position: center center;
+
+}
+.otherLogin div:hover{
+box-shadow: inset 3px 3px 5px gray;
+}
+#layout-reg{
+
+  text-align: center;
+}
+
+/* 登陆完后的版面样式 */
+#userlogin{
+  color:white;
+
+}
+
+#userlogin .left{
+
+  width: 20%;
+  float:left;
+}
+#userimg,.userimg{
+  width: 50px;
+  height:50px;
+  background-position: center center;
+  background-size: 100%;
+  background-image: url(../image/tx/1.png);
+  border-radius: 50%;
+  transition: all 200ms;
+}
+#userimg:hover,.userimg:hover{
+   box-shadow:inset 0px 0px 10px black;
+}
+
+#userlogin .right{
+  display: inline-block;
+    float:right;
+    /* background-color: #563624; */
+    color:white;
+    min-height: 400px;
+   overflow:hidden;
+  width: 75%;
+}
+
+#userlogin .left .btns {
+  text-align: center;
+  transition: all 500ms;
+  padding: 3px;
+  border: 2px solid green;
+  font-size: 16pt;
+}
+#userlogin .left .btns:hover {
+  color:black;
+  background-color: white;
+  box-shadow: inset 3px 3px 5px black;
+  border: 2px solid pink;
+}
+#userlogin .left .btns_hover{
+  color:black;
+  background-color: white;
+  box-shadow: inset 3px 3px 5px black;
+  border: 2px solid pink;
+}
+.right .usermsglayout{
+  width: 101%;
+  margin-top: 20px;
+  text-align: center;
+}
+.msgGroup{
+  text-align: left;
+  font-size: 14pt;
+  color:white;
+
+}
+.msgGroup .msgtit {
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+}
+
+.msgGroup button {
+  font-size: 8pt;
+  visibility: hidden;
+  cursor:pointer;
+  border-radius: 2px;
+}
+.msgGroup input {
+  font-size: 12pt;
+  cursor:pointer;
+  border-radius: 2px;
+
+  color:black;
+
+}
+.msgGroup .userimg {
+  display:inline-block;
+
+}

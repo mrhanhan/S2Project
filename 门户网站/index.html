@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>鐢ㄦ埛娉ㄥ唽</title>
+    <script type="text/javascript" src="scripts/dataSave.js"></script>
+    <script type="text/javascript" src="scripts/userData.js"></script>
+
+
+  </head>
+  <body >
+    <div id="childBody">
+    <div class="body-group index-top shadow ">
+      <!--杞挱鍥�-->
+      <div class="index-img  " >
+        <!--校园-->
+          <div class="index-icon index-icon-hover "  onmouseover="index_hover_change_over(this)" onmouseout="index_hover_change_out(this)" path="image/lbt/0.jpg"> </div>
+            <div class="index-icon " path="image/lbt/1.jpg" onmouseover="index_hover_change_over(this)" onmouseout="index_hover_change_out(this)"> </div>
+             <div class="index-icon " path="image/lbt/2.jpg" onmouseover="index_hover_change_over(this)" onmouseout="index_hover_change_out(this)"> </div>
+              <div class="index-icon " path="image/lbt/3.jpg" onmouseover="index_hover_change_over(this)" onmouseout="index_hover_change_out(this)"> </div>
+                <div class="index-icon " path="image/lbt/4.jpg" onmouseover="index_hover_change_over(this)" onmouseout="index_hover_change_out(this)"> </div>
+                  <div class="index-icon " path="image/lbt/5.jpg" onmouseover="index_hover_change_over(this)" onmouseout="index_hover_change_out(this)"> </div>
+
+      </div>
+      <div class=" index-list" >
+        <h3>新闻<a href="">查看更多</a></h3>
+        <hr/>
+        <ul>
+          <!--导航栏-->
+          <li><a href="index.html" class="index-list-a" >六大福利助力！《灵山奇缘》万</a></li>
+          <li><a href="index.html" class="index-list-a">《传奇世界3D》手游不删档首日登顶ios</a></li>
+          <li><a href="index.html" class="index-list-a">越消除越幸运 《消除者联盟》NINEPERC</a></li>
+          <li><a href="index.html" class="index-list-a" >群雄逐鹿QQ飞车手游高校联赛，安徽省赛！</a></li>
+          <li><a href="index.html" class="index-list-a">六大福利助力！《灵山奇缘》万</a></li>
+          <li><a href="index.html" class="index-list-a">《传奇世界3D》手游不删档首日登顶ios</a></li>
+          <li><a href="index.html" class="index-list-a">越消除越幸运 《消除者联盟》NINEPERC</a></li>
+          <li><a href="index.html" class="index-list-a" >群雄逐鹿QQ飞车手游高校联赛，安徽省赛！</a></li>
+        </ul>
+
+      </div>
+    </div>
+    <!--事件-->
+    <div class="index-event shadow">
+       <div class="index-left ">
+         <div class="index-btn1" onmouseover="index_btn_hover(this)" name="tga" title="大事件">
+           <div class="bt1" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TGA</div>
+           <div class="bt2" style="background:#DDF0ED;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TGA</div>
+         </div>
+         <div class="index-btn1" onmouseover="index_btn_hover(this)"  name="fyl"   title="大事件">
+           <div class="bt1" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;泛娱乐</div>
+           <div class="bt2" style="background:pink;">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;泛娱乐</div>
+         </div>
+         <div class="index-btn1" onmouseover="index_btn_hover(this)" name="axlm"   title="大事件">
+           <div class="bt1" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;爱心联盟</div>
+           <div class="bt2" style="background:#C7FFEC;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;爱心联盟</div>
+         </div>
+         <div class="index-btn1" onmouseover="index_btn_hover(this)" name="yxgh"  title="大事件">
+           <div class="bt1" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;游戏公会</div>
+           <div class="bt2" style="background:#F2EFE6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;游戏公会</div>
+         </div>
+         <div class="index-btn1" onmouseover="index_btn_hover(this)" name="jnh"  title="大事件">
+           <div class="bt1" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;嘉年华</div>
+           <div class="bt2" style="background:#DDF0ED;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;嘉年华</div>
+         </div>
+       </div>
+       <div class="index-right " id="right"></div>
+    </div>
+
+    <!-- 游戏logo -->
+    <div class="index-logo shadow">
+      <div class="apptype">
+        <div class="appTypeTitle" onmouseover="showTypeTxt(this)" onclick="appendApp('全部',0);">
+           <div class="l">全部</div>
+           <div class="f">全部</div>
+        </div>
+        <div class="appTypeTitle" onmouseover="showTypeTxt(this)" onclick="appendApp('最新游戏',1);">
+           <div class="l">最新游戏</div>
+           <div class="f">最新游戏</div>
+        </div>
+        <div class="appTypeTitle" onmouseover="showTypeTxt(this)" onclick="appendApp('运动类',2);">
+           <div class="l">运动类</div>
+           <div class="f">运动类</div>
+        </div>
+        <div class="appTypeTitle" onmouseover="showTypeTxt(this)" onclick="appendApp('策略类',3);">
+           <div class="l">策略类</div>
+           <div class="f">策略类</div>
+        </div>
+        <div class="appTypeTitle" onmouseover="showTypeTxt(this)" onclick="appendApp('射击类',4);">
+           <div class="l">射击类</div>
+           <div class="f">射击类</div>
+        </div>
+        <div class="appTypeTitle" onmouseover="showTypeTxt(this)" onclick="appendApp('模拟类',5);">
+           <div class="l">模拟类</div>
+           <div class="f">模拟类</div>
+        </div>
+        <div class="appTypeTitle" onmouseover="showTypeTxt(this)" onclick="appendApp('即时策略类',6);">
+           <div class="l">即时策略类</div>
+           <div class="f">即时策略类</div>
+        </div>
+        <div class="appTypeTitle" onmouseover="showTypeTxt(this)" onclick="appendApp('FPS类',7);">
+           <div class="l">FPS类</div>
+           <div class="f">FPS类</div>
+        </div>
+      </div>
+
+      <div class="apps">
+
+          <div class="app-group">
+            <div class="app-top">
+              <div class="app-logo"></div>
+            </div>
+           <!-- 内容 -->
+            <hr/>
+             <div class="app-name">足球小子</div>
+             <div class="app-com">
+                <div class="app-like">
+                  <img src="image/zan/1.png" width="20px" title="点击收藏" height="20px" onclick="Ilike(this)"/>
+                </div>
+             </div>
+           </div>
+         </div>
+    </div>
+    </div>
+
+    </script>
+  </body>
+</html>
+<script type="text/javascript">
+
+    saveKV('ch',document.getElementById("childBody").innerHTML);
+    saveKV('script',"scripts/index.js scripts/apps.js");
+</script>

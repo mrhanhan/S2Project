@@ -1,0 +1,101 @@
+.space-body{
+  text-align: left;
+  border-radius: 20px 20px 10px 10px;
+  margin-bottom: 20px;
+
+}
+
+.sendSpace{
+  transition:all 500ms;
+  height: 200px;
+  overflow: hidden;
+  padding: 20px;
+  width: 500px;;
+}
+.sendSpace .titles{
+  text-align: center;
+  color:white;
+}
+.sendSpace button{
+  display: block;
+  transition:all 200ms;
+  width: 50px;
+}
+.sendSpace button:hover{
+  box-shadow: inset 0px 0px 5px black;
+}
+
+/* 动态 */
+.bookGroup{
+
+  margin: 20px;
+  padding: 5px;
+  transition: all 200ms;
+  border-bottom: 2px dotted gray;
+
+}
+.bookGroup:hover{
+
+  /* box-shadow: inset 1px 1px 15px black; */
+
+}
+.bookGroup .title{
+  font-weight: bold;
+}
+.bookGroup .user{
+  background-repeat: no-repeat;
+  background-size: 40px;
+  height: 40px;
+  background-image: url(../image/tx/1.png);
+  padding-left: 45px;
+}
+.bookGroup span{
+
+  font-size: 12pt;
+}
+ .bookGroup .spacedate{
+   color:gray;
+   font-size: 8pt;
+ }
+ .PLUser{
+   background-repeat: no-repeat;
+   background-position:left center;
+   background-size: 20px;
+   font-size: 12pt;
+   height:40px;
+   background-image: url(../image/tx/1.png);
+   padding-left: 25px;
+   margin-top: 5px;
+ }
+  .PLmsg{
+      width: 80%;
+      font-size: 14pt;
+      color:gray;
+      padding: 2px 5px;
+      border: 1px solid gray;
+      transition: color 200ms;
+       margin-bottom: 5px;
+   }
+  .PLmsg:hover{
+    color:black;
+  }
+  .PLInput{
+    transition: all 200ms;
+    overflow: hidden;
+    height:40px;
+
+  }
+  .PLInput input,.PLInput button{
+    height:30px;
+    display: inline-block;
+    transition: all 200ms;
+    margin-bottom: 5px;
+
+  }
+  .PLInput button{
+    margin-left: 10px;
+    padding: 2px 30px;
+  }
+  .PLInput input:hover{
+      box-shadow: inset 1px 1px 15px black;
+  }

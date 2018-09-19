@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFFCDBA4-2EBB-4371-9B5E-E2ADE1FCC29E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NoteSystem</RootNamespace>
+    <AssemblyName>NoteSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigSeting.cs" />
+    <Compile Include="DataManage\MessageOper.cs" />
+    <Compile Include="DataManage\NoteBlockOper.cs" />
+    <Compile Include="DataManage\NoteDateFileOper.cs" />
+    <Compile Include="DataManage\NoteIO.cs" />
+    <Compile Include="DataManage\NoteOper.cs" />
+    <Compile Include="DataManage\UserInfoOper.cs" />
+    <Compile Include="FormFun\NoteViewGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormFun\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modles\BaseNote.cs" />
+    <Compile Include="Modles\Message.cs" />
+    <Compile Include="Modles\Node\Note.cs" />
+    <Compile Include="Modles\NoteAllData.cs" />
+    <Compile Include="Modles\NoteBlock.cs" />
+    <Compile Include="Modles\Node\NoteNode.cs" />
+    <Compile Include="Modles\Node\NoteType.cs" />
+    <Compile Include="Modles\UserInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BaseNoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BaseNoteForm.Designer.cs">
+      <DependentUpon>BaseNoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Component\BaseNoteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Component\BaseNoteControl.Designer.cs">
+      <DependentUpon>BaseNoteControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Component\CreateTypeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Component\CreateTypeControl.Designer.cs">
+      <DependentUpon>CreateTypeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Component\LayoutControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Component\NoteEditBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Component\NoteEditBox.Designer.cs">
+      <DependentUpon>NoteEditBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Component\NoteView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Component\NoteView.Designer.cs">
+      <DependentUpon>NoteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Component\NoteViewGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Component\NoteViewGroup.Designer.cs">
+      <DependentUpon>NoteViewGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Component\UserInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Component\UserInfoControl.Designer.cs">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Message\InputMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Message\InputMsg.Designer.cs">
+      <DependentUpon>InputMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Message\NoteMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Message\NoteMsg.Designer.cs">
+      <DependentUpon>NoteMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RegForm.Designer.cs">
+      <DependentUpon>RegForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BaseNoteForm.resx">
+      <DependentUpon>BaseNoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Component\BaseNoteControl.resx">
+      <DependentUpon>BaseNoteControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Component\CreateTypeControl.resx">
+      <DependentUpon>CreateTypeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Component\NoteEditBox.resx">
+      <DependentUpon>NoteEditBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Component\NoteView.resx">
+      <DependentUpon>NoteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Component\NoteViewGroup.resx">
+      <DependentUpon>NoteViewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Component\UserInfoControl.resx">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Message\InputMsg.resx">
+      <DependentUpon>InputMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Message\NoteMsg.resx">
+      <DependentUpon>NoteMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegForm.resx">
+      <DependentUpon>RegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe\File.dgml" />
+    <None Include="ReadMe\NoteRelation.dgml" />
+    <None Include="ReadMe\Oper.dgml" />
+    <None Include="Resources\loginBackImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainbackimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.jpg" />
+    <None Include="Resources\Create.jpg" />
+    <None Include="Resources\dle.jpg" />
+    <None Include="Resources\exp.jpg" />
+    <None Include="Resources\imp.jpg" />
+    <None Include="Resources\logo.bmp" />
+    <None Include="Resources\a.jpg" />
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\NoteLogo.png" />
+    <Content Include="Resources\setting.jpg" />
+    <Content Include="Resources\setting_P.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

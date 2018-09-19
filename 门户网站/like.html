@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>鐢ㄦ埛娉ㄥ唽</title>
+    <script type="text/javascript" src="scripts/dataSave.js"></script>
+    <script type="text/javascript" src="scripts/userData.js"></script>
+
+
+  </head>
+  <body >
+      <div id="childBody">
+        <div class="like-body shadow">
+          <!-- 头部 -->
+          <div class="like-top">
+
+            <div class="like-userimg" onclick="showLoginPlane(0,0)">
+              <!-- 用户头像 -->
+            </div>
+            <div class="like-usermsg">
+              <!-- 用户信息 -->
+              <div class="like-username">
+                2222
+              </div>
+              <div class="like-add">
+                2222
+              </div>
+            </div>
+          </div>
+          <!-- 内容 -->
+          <div class="appbody">
+                <div class="app-group" onmouseover="showBtn(this,true)" onmouseout="showBtn(this,false)">
+                  <div class="app-top">
+                    <div class="app-logo"></div>
+                  </div>
+                 <!-- 内容 -->
+                  <hr/><div class="typetxt">全部</div><hr/>
+                   <div class="app-name">足球小子</div>
+                   <div class="app-com">
+                      <div class="app-like">
+                        <img src="image/zan/2.png" width="20px" height="20px" />
+                      </div>
+                      <div class="showBtn" onclick="removeApp(this)">
+                        移除收藏
+                      </div>
+                   </div>
+               </div>
+          </div>
+        </div>
+     </div>
+     <script type="text/javascript">
+
+         saveKV('ch',document.getElementById("childBody").innerHTML);
+         saveKV('script',"scripts/like.js");
+     </script>
+
+  </body>
+  </html>

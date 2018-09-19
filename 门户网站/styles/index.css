@@ -1,0 +1,129 @@
+.index-img{
+  width: 68%;
+  float:left;
+  transition: all 200ms;
+  background-image: url(../image/lbt/0.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100% ;
+}
+.index-list{
+  text-align:left;
+  padding: 10px;
+  width:30%;
+ float:left;
+ background-color: white;
+}
+.index-list ul{
+  list-style-image: url(../image/listimg1.jpg);
+  list-style-position: inside;/*图标显示内部*/
+
+}
+.index-list ul li{
+  font-size: 10pt;
+  margin: 5px;
+
+  border-bottom: 1px dotted gray;
+}
+.index-list ul li a{
+  font-size: 10pt;
+  color:gray;
+  text-decoration:none;
+
+}
+/* 列表连接样式 */
+.index-list ul li a:hover{
+
+  color:red;
+
+
+}
+.index-top{
+  height:275px;
+
+}
+.index-list h3 a{
+  float: right;
+  color:red;
+  font-weight: normal;
+  line-height: 30px;
+  font-size: 10pt;
+}
+/* 轮播图小按钮 */
+.index-icon{
+   width: 20px;
+   height:20px;
+   background-color: none;
+   border:1px solid white;
+   box-shadow: 2px 2px 8px black;
+   margin:  1px 5px;
+   float: right;
+   position: relative;
+   top: 250px;
+   transition:  all 300ms;
+   border-radius:5px;
+}
+.index-icon:hover,.index-icon-hover{
+  background-color: white;
+   border-radius:10px;
+   box-shadow:inset 2px 2px 8px black ;
+}
+/* 事件 */
+.index-event{
+  margin-top: 10px;
+  width:  100%;
+  min-height:180px;
+  background-color: green;
+}
+
+.index-event .index-left{
+  width:29%;
+  height:180px;
+  float:left;
+}
+.index-event .index-right{
+  background-image: url(../image/xxt/tga.jpg);
+  width:70%;
+  transition: all 100ms;
+  height:180px;
+  float:right;
+}
+.index-btn1{
+  position: relative;
+  text-align: left;
+  font-size: 12pt;
+  font-weight: bold;
+   margin: 0px;
+   padding: 0px;
+  height: 35px;
+}
+.index-btn1 .bt1{
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  color: white;
+  transition: ease all 500ms;
+
+  top: 0px;
+
+}
+.index-btn1 .bt2{
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  color: black;
+  width: 0px;
+
+    background-color: white;
+  overflow: hidden;
+  transition:ease all 500ms;
+
+  top: 0px;
+}
+
+.index-logo{
+  margin-top: 20px;
+  
+}
